@@ -9,7 +9,12 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FormsButton.iOS", "FormsBut
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FormsButton.UWP", "FormsButton\FormsButton.UWP\FormsButton.UWP.csproj", "{7D5D94F4-4D3F-477B-856F-541E5590F539}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FormsButton", "FormsButton\FormsButton\FormsButton.csproj", "{25E1C051-7D9F-4C78-B5BE-78D7999FC86D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FormsButton", "FormsButton\FormsButton\FormsButton.csproj", "{25E1C051-7D9F-4C78-B5BE-78D7999FC86D}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{C4821E59-B82B-4280-AF7B-292EAD0B5048}"
+	ProjectSection(SolutionItems) = preProject
+		README.md = README.md
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
