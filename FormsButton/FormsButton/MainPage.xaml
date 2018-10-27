@@ -7,8 +7,32 @@
     <StackLayout>
         <!-- Place new controls here -->
         <Label Text="Welcome to Xamarin.Forms!" 
-           HorizontalOptions="Center"
-           VerticalOptions="CenterAndExpand" />
+           HorizontalOptions="Center" />
+        <Image Source="{local:ImageResource FormsButton.Resources.but_simple14-a45.png}" BackgroundColor="Red"/>
+        <Grid HorizontalOptions="Center">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="auto"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="auto"/>
+            </Grid.RowDefinitions>
+            <Image Source="{local:ImageResource FormsButton.Resources.but_simple14-a45.png}" Aspect="Fill" />
+            <Button Text="grid" BackgroundColor="Transparent"/>
+        </Grid>
+        <Grid HorizontalOptions="Center">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="auto"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="auto"/>
+            </Grid.RowDefinitions>
+            <Image Source="{local:ImageResource FormsButton.Resources.but_simple14-a45.png}" Aspect="Fill" />
+            <Frame BackgroundColor="#80FF0000"/>
+            <Button Text="grid long long long long" BackgroundColor="Transparent"/>
+        </Grid>
+        <Button Text="default"/>
+        <Label Text="Welcome to Xamarin.Forms!" 
+           HorizontalOptions="Center" />
     </StackLayout>
 
 </ContentPage>
