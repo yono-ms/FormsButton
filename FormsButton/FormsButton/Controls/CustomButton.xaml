@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="FormsButton.Controls.CustomButton"
+             x:Name="myView">
+    <ContentView.Content>
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="auto"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="auto"/>
+            </Grid.RowDefinitions>
+            <Image x:Name="ImageDisabled" Aspect="Fill"/>
+            <Image x:Name="ImageNormal" Aspect="Fill" BindingContext="{x:Reference myView}" IsVisible="{Binding Path=IsEnabled}"/>
+            <Image x:Name="ImagePressed" Aspect="Fill" Opacity="0.01"/>
+            <Label x:Name="LabelText" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" Margin="16,8,16,10">
+                <Label.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="TapGestureRecognizer_TappedAsync"/>
+                </Label.GestureRecognizers>
+            </Label>
+        </Grid>
+    </ContentView.Content>
+</ContentView>

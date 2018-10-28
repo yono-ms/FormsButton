@@ -13,5 +13,10 @@ namespace FormsButton
         {
             InitializeComponent();
         }
+
+        private void Button_Clicked(object sender, EventArgs e)
+        {
+            System.Diagnostics.Trace.WriteLine($"Button_Clicked {sender}");
+        }
     }
 }

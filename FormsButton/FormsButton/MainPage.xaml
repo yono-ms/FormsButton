@@ -2,13 +2,14 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:local="clr-namespace:FormsButton"
+             xmlns:controls="clr-namespace:FormsButton.Controls"
              x:Class="FormsButton.MainPage">
 
     <StackLayout>
         <!-- Place new controls here -->
-        <Label Text="Welcome to Xamarin.Forms!" 
-           HorizontalOptions="Center" />
-        <Image Source="{local:ImageResource FormsButton.Resources.but_simple14-a45.png}" BackgroundColor="Red"/>
+        <Label Text="Simple Image" HorizontalOptions="Center" />
+        <Image Source="{local:ImageResource FormsButton.Resources.test_image.png}"/>
+        <Label Text="Grid(Image Button)" HorizontalOptions="Center" />
         <Grid HorizontalOptions="Center">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="auto"/>
@@ -16,9 +17,10 @@
             <Grid.RowDefinitions>
                 <RowDefinition Height="auto"/>
             </Grid.RowDefinitions>
-            <Image Source="{local:ImageResource FormsButton.Resources.but_simple14-a45.png}" Aspect="Fill" />
-            <Button Text="grid" BackgroundColor="Transparent"/>
+            <Image Source="{local:ImageResource FormsButton.Resources.test_image.png}" Aspect="Fill" />
+            <Button Text="grid" BackgroundColor="Transparent" Clicked="Button_Clicked"/>
         </Grid>
+        <Label Text="Grid(Image Button) long Text" HorizontalOptions="Center" />
         <Grid HorizontalOptions="Center">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="auto"/>
@@ -26,13 +28,34 @@
             <Grid.RowDefinitions>
                 <RowDefinition Height="auto"/>
             </Grid.RowDefinitions>
-            <Image Source="{local:ImageResource FormsButton.Resources.but_simple14-a45.png}" Aspect="Fill" />
-            <Frame BackgroundColor="#80FF0000"/>
-            <Button Text="grid long long long long" BackgroundColor="Transparent"/>
+            <Image Source="{local:ImageResource FormsButton.Resources.test_image.png}" Aspect="Fill" />
+            <Button Text="grid long 長い 長い long long long" BackgroundColor="Transparent" Clicked="Button_Clicked"/>
+        </Grid>
+        <Label Text="Grid(Image Label)" HorizontalOptions="Center" />
+        <Grid HorizontalOptions="Center">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="auto"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="auto"/>
+            </Grid.RowDefinitions>
+            <Image Source="{local:ImageResource FormsButton.Resources.test_image.png}" Aspect="Fill" />
+            <Label Text="日本語表示例" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" Margin="8,8,8,12"/>
         </Grid>
         <Button Text="default"/>
-        <Label Text="Welcome to Xamarin.Forms!" 
-           HorizontalOptions="Center" />
+        <Label Text="Welcome to Xamarin.Forms!" HorizontalOptions="Center" />
+        <Label Text="CustomButton default" HorizontalOptions="Center" />
+        <controls:CustomButton HorizontalOptions="Center" BindingContext="{x:Reference SwitchDefault}" IsEnabled="{Binding Path=IsToggled}"
+                               Text="デフォルトで使用の表示例" TextColor="White" Clicked="Button_Clicked"/>
+        <Switch x:Name="SwitchDefault" IsToggled="True"/>
+        <Label Text="CustomButton 3 state images" HorizontalOptions="Center" />
+        <controls:CustomButton x:Name="CustomButtonTest" HorizontalOptions="Center" BindingContext="{x:Reference SwitchCustom}" IsEnabled="{Binding IsToggled}"
+                               Source="{local:ImageResource FormsButton.Resources.button_g_normal.png}"
+                               SourcePressed="{local:ImageResource FormsButton.Resources.button_g_pressed.png}"
+                               SourceDisabled="{local:ImageResource FormsButton.Resources.button_g_disabled.png}"
+                               Text="3状態の画像を設定" TextColor="White" Clicked="Button_Clicked"/>
+        <Switch x:Name="SwitchCustom" IsToggled="True"/>
+        <Label Text="Welcome to Xamarin.Forms!" HorizontalOptions="Center" />
     </StackLayout>
 
 </ContentPage>
