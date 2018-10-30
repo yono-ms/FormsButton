@@ -17,6 +17,9 @@
     <None Remove="Resources\button_g_pressed.png" />
     <None Remove="Resources\button_normal.png" />
     <None Remove="Resources\button_pressed.png" />
+    <None Remove="Resources\dl013_button_default.9.png" />
+    <None Remove="Resources\dl013_button_disabled.9.png" />
+    <None Remove="Resources\dl013_button_pressed.9.png" />
     <None Remove="Resources\test_image.png" />
   </ItemGroup>
 
@@ -27,10 +30,14 @@
     <EmbeddedResource Include="Resources\button_g_pressed.png" />
     <EmbeddedResource Include="Resources\button_normal.png" />
     <EmbeddedResource Include="Resources\button_pressed.png" />
+    <EmbeddedResource Include="Resources\dl013_button_default.9.png" />
+    <EmbeddedResource Include="Resources\dl013_button_disabled.9.png" />
+    <EmbeddedResource Include="Resources\dl013_button_pressed.9.png" />
     <EmbeddedResource Include="Resources\test_image.png" />
   </ItemGroup>
 
   <ItemGroup>
+    <PackageReference Include="SkiaSharp.Views.Forms" Version="1.60.3" />
     <PackageReference Include="Xamarin.Forms" Version="3.3.0.912540" />
   </ItemGroup>
 
