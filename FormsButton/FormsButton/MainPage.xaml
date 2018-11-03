@@ -4,6 +4,7 @@
              xmlns:local="clr-namespace:FormsButton"
              xmlns:controls="clr-namespace:FormsButton.Controls"
              xmlns:skia="clr-namespace:SkiaSharp.Views.Forms;assembly=SkiaSharp.Views.Forms"
+             xmlns:np="clr-namespace:NPImage;assembly=NPImage"
              x:Class="FormsButton.MainPage">
 
     <StackLayout>
@@ -55,7 +56,12 @@
                                SourceDisabled="{local:ImageResource FormsButton.Resources.button_g_disabled.png}"
                                Text="3状態の画像を設定" TextColor="White" Clicked="Button_Clicked"/>
         <Switch x:Name="SwitchCustom" IsToggled="True"/>
-        <Label Text="SkiaSharp" HorizontalOptions="Center" />
+        <Label Text="Nuget package" HorizontalOptions="Center" />
+        <np:TSNPButton Text="push" Clicked="Button_Clicked"
+                       Source="FormsButton.Resources.dl015_button_default.9.png"
+                       SourcePressed="FormsButton.Resources.dl015_button_pressed.9.png"
+                       SourceDisabled="FormsButton.Resources.dl015_button_disabled.9.png"
+                       />
     </StackLayout>
 
 </ContentPage>
