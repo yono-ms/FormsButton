@@ -109,3 +109,18 @@ Xamarin.FormsでBitmap操作を行うための公式ライブラリを使用する。
 外周の黒判定を独自実装すれば、
 Androidの9patchフォーマットをきれいに拡大可能となる。
 3状態をCanvas内で分岐すれば3層作らなくてもよくなる。
+
+## 再利用化
+
+NuGetに登録してみた。
+
+https://www.nuget.org/packages/NPImage/
+
+```html
+<np:TSNPButton Text="push" Clicked="Button_Clicked"
+                Source="FormsButton.Resources.dl015_button_default.9.png"
+                SourcePressed="FormsButton.Resources.dl015_button_pressed.9.png"
+                SourceDisabled="FormsButton.Resources.dl015_button_disabled.9.png"
+                />
+
+```
